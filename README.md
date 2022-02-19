@@ -1,7 +1,7 @@
 # Password Generator
 
 ## Purpose
-This website is a password generator in java script that allows the user to choose length, case, number and special characters.
+This website is a password generator in java script that allows the user to choose length, upper and lower  case letters, number and special characters.
 
 ## Built With
 * HTML
