@@ -83,6 +83,8 @@ for (var i = 0; i < userOptions["len"]; i++) {
   console.log(i);
 }
 
+return password;
+
 };
 
 // Add event listener to generate button
