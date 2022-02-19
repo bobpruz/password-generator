@@ -49,6 +49,41 @@ var options = {
 return options;
 };
 
+// Generate Password From Options
+function generatePassword() {
+  // fetch options given by user
+  var userOptions = getPasswordOptions();
+
+  // Initialize Password Variable
+  var password = "";
+
+  // Initialize passwordOptions Variable
+  var passwordOptions = "";
+
+if (userOptions["incUpper"]) {
+  passwordOptions = passwordOptions + upperCase
+}
+
+if (userOptions["incLower"]) {
+  passwordOptions = passwordOptions + lowerCase
+}
+
+if (userOptions["incSpecial"]) {
+  passwordOptions = passwordOptions + special
+}
+
+if (userOptions["incNumeric"]) {
+  passwordOptions = passwordOptions + numeric
+}
+
+// for loop creating password
+for (var i = 0; i < userOptions["len"]; i++) {
+  var passwordCharIndex = Math.floor(Math.random() * passwordOptions.length);
+  password = password + passwordOptions[passwordCharIndex];
+  console.log(i);
+}
+
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
